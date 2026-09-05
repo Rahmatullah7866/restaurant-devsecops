@@ -1,0 +1,84 @@
+:root {
+  --primary-color: #2c3e50;
+  --background-color: #f8f9fa;
+  --card-bg: #ffffff;
+  --text-main: #333333;
+  --text-muted: #6c757d;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.menu-header {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.dishes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.dish-card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.dish-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.dish-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.dish-name {
+  margin: 0;
+  color: var(--text-main);
+  font-size: 1.25rem;
+}
+
+.dish-price {
+  font-weight: bold;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
+
+.dish-description {
+  color: var(--text-main);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.dish-ingredients {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
